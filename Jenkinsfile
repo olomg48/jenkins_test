@@ -7,7 +7,7 @@ pipeline
         stage('test')
         {
             steps{
-                echo "siematest2"
+                echo "siematest22"
             }
         }
     }
