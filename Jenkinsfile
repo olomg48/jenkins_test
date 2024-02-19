@@ -11,19 +11,23 @@ pipeline
             }
         }
 
-        stage('clone repo')
+        stage('build docker')
         {
             steps{
-                sh 'cd /home/jenkins'
-                sh 'git clone https://github.com/olomg48/jenkins_test'
+                sh 'docker build -t obraz_nginx:1.0'
             }
+        }
+
+        stage('run docker')
+        {
+            sh 'docker run -p 80:80 --name nginx_app obraz_nginx:1.0'
         }
 
         /*stage("sprzatanie")
         {
             steps{
                 sh 'cd /home/jenkins'
-                sh 'rmd -r jenkins_test'
+                sh 'rm -r jenkins_test'
             }
         }*/
     }
