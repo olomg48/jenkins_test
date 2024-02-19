@@ -10,7 +10,12 @@ pipeline
                 echo "test30"
             }
         }
-
+        stage('newgrp docker')
+        {
+            steps{
+                sh 'newgrp docker'
+            }
+        }
         stage('build docker')
         {
             steps{
