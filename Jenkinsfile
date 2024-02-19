@@ -19,8 +19,10 @@ pipeline
         }
 
         stage('run docker')
-        {
-            sh 'docker run -p 80:80 --name nginx_app obraz_nginx:1.0'
+        {   
+            steps{
+                sh 'docker run -p 80:80 --name nginx_app obraz_nginx:1.0'
+            }
         }
 
         /*stage("sprzatanie")
