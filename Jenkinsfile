@@ -14,6 +14,7 @@ pipeline
         {
             steps{
                 sh 'newgrp docker'
+                sh 'whoami'
             }
         }
         stage('build docker')
