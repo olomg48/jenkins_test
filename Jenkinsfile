@@ -19,12 +19,12 @@ pipeline
             }
         }
 
-        stage("sprzatanie")
+        /*stage("sprzatanie")
         {
             steps{
                 sh 'cd /home/jenkins'
                 sh 'rmd -r jenkins_test'
             }
-        }
+        }*/
     }
 }
