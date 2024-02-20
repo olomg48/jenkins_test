@@ -27,7 +27,7 @@ pipeline
         stage('run docker')
         {   
             steps{
-                sh 'docker run -p 80:80 --name nginx_app obraz_nginx:1.0'
+                sh 'docker run -d -it -p 8080:80 --name nginx_app obraz_nginx:1.0'
             }
         }
     }
